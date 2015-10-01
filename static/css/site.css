@@ -33,7 +33,8 @@ section{
 }
 body {
   color: #404040;
-  font-family: "Helvetica Neue",Helvetica,"Liberation Sans",Arial,sans-serif;
+  // font-family: "Helvetica Neue",Helvetica,"Liberation Sans",Arial,sans-serif;
+  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
   font-size: 14px;
   line-height: 1.4;
 }
@@ -42,6 +43,9 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+img {
+  vertical-align: inherit;
 }
 ul {
     margin-top: 0;
@@ -144,13 +148,11 @@ h1 {
   margin-bottom: .5em;
   font-weight: 700;
 }
-h1:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #ddd;
-}
+
+.glitch div:hover h1 {
+  color: white;
+} 
+
 h2 {
   font-size: 19px;
   font-weight: 400;
@@ -190,4 +192,31 @@ line-height: 1.4;
   word-wrap: break-word;
   overflow: auto;
   font-family: Menlo,Monaco,"Liberation Mono",Consolas,monospace !important;
+}
+
+.glitch div {
+  display: inline-block;
+  position: relative;
+}
+
+#gifs img {
+  width: 70px;
+}
+
+.puzzle {
+  /* Prevent vertical gaps */
+    line-height: 0;
+       
+   -webkit-column-count: 5;
+   -webkit-column-gap:   0px;
+   -moz-column-count:    5;
+   -moz-column-gap:      0px;
+   column-count:         5;
+   column-gap:           0px;  
+}
+
+#gifs img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
 }

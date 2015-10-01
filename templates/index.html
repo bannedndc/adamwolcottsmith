@@ -1,29 +1,46 @@
 <!doctype html>
+{% import 'macros.html' as macros %}
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Invisible Hand | band </title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
 
   <link href='/css/site.css' rel='stylesheet' type='text/css' />
 </head>
 <body>
+  <div id="overlay" style="height: 100vh; width: 100%;position: absolute;background-color: transparent;display: none;"></div>
 
   <section class='container'>
 
-    <div class="row">
-      <img src="/images/glitch.gif" />
-      <img src="/images/glitch.gif" />
-      <img src="/images/glitch.gif" />
-      <img src="/images/glitch.gif" />
-      <div style="width: 670px;display: inline-block;position:absolute;">
-	<h1>Invisible Hand is a band</h1>
-      </div>
-      <img src="/images/glitch.gif" />
-      <img src="/images/glitch.gif" />
-      <img src="/images/glitch.gif" />
+    <div class="row glitch">
+      {% for square in ['tour dates', 'photos', 'music releases', 'writings', 'Invisible Hand is a
+      band', 'Invisible Hand is a band', 'Invisible Hand is a band'] %}
+	<div id="glitch-{{loop.index}}" style="cursor: pointer;">
+	  <h1 style="position: absolute;top: 0;z-index: 1;">{{ square }}</h1>
+	  <img src="/images/glitch.gif" />
+	</div>
+	{% if square == 'tour dates' %}
+	  {% set upcoming_dates =  results_upcoming.resultsPage.results.event %}
+	  {% set past_dates =  results_past.resultsPage.results.event %}
+	  {{ macros.tour_dates(loop.index, upcoming_dates, past_dates) }}
+	{% elif square == 'photos' %}
+	  {{ macros.photos(loop.index) }}
+	{% elif square == 'music releases' %}
+	  {{ macros.music(loop.index) }}
+	{% endif %}
+      {% endfor %}
     </div>
 
   </section>
+  <script src='/javascript/bootbox.js'></script>
+  <script src='/javascript/common.js'></script>
 </body>
 </html>

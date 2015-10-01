@@ -1,0 +1,143 @@
+{% macro tour_dates(loop_index, upcoming_dates, past_dates) -%}
+    <div id="section-{{loop_index}}" style="position: absolute;
+					    top: 100px;
+					    overflow-y: scroll;
+					    left: 100px;
+					    height: 500px;
+					    width: 600px;
+					    z-index: 2;
+					    display: block;
+					    border: 5px solid black;
+					    background-color: white;
+					    display: none;">
+
+
+
+
+
+      <button id="close-{{loop_index}}" class="btn btn-link pull-right" style="color: black;font-size: 29px;position: absolute;right:
+      10px;">x</button>
+      <table class="table">
+	<caption>tour dates.</caption>
+	<tbody>
+	  {% for tour_date in upcoming_dates %}
+	  <tr>
+	    {% set date = tour_date.start.date.split('-') %}
+	    <th scope="row">{{date[1]}}/{{date[2]}}</th>
+	    <td>{{tour_date.venue.displayName}}</td>
+	    <td>{{tour_date.location.city[:-4]}}</td>
+	  </tr>
+	  {% endfor %}
+	</tbody>
+      </table>
+      <br>
+      <br>
+      <table class="table">
+	<caption>past events.</caption>
+	<tbody>
+	  {% for tour_date in past_dates[::-1] %}
+	  <tr>
+	    {% set date = tour_date.start.date.split('-') %}
+	    <th scope="row">{{date[1]}}/{{date[2]}}/{{date[0]}}</th>
+	    <td>{{tour_date.venue.displayName}}</td>
+	    <td>{{tour_date.location.city[:-4]}}</td>
+	  </tr>
+	  {% endfor %}
+	</tbody>
+      </table>
+    </div>
+{%- endmacro %}
+
+{% macro photos(loop_index) -%}
+  <div id="section-{{loop_index}}" style="position: absolute;
+					  top: 100px;
+					  left: 0;
+					  height: 789px;
+					  background-color: black;
+					  width: 100%;
+					  display: none;
+					  z-index: 2;
+					  overflow: hidden;
+					  border: 5px solid black;">
+
+
+
+
+
+    <button id="close-{{loop_index}}" class="btn btn-link pull-right" style="color: white;z-index:
+    2;font-size: 29px;position: absolute;right:
+    10px;">x</button>
+    <div class="puzzle" id="gifs">
+      <img src="/images/highline1.gif"/>
+      <img src="/images/highline2.gif"/>
+      <img src="/images/highline3.gif"/>
+      <img src="/images/bigbldg1.gif"/>
+      <img src="/images/highline4.gif"/>
+      <img src="/images/highline5.gif"/>
+      <img src="/images/highline6.gif"/>
+      <img src="/images/bigbldg4.gif"/>
+      <img src="/images/highline7.gif"/>
+      <img src="/images/highline8.gif"/>
+      <img src="/images/highline9.gif"/>
+      <img src="/images/highline10.gif"/>
+      <img src="/images/highline11.gif"/>
+      <img src="/images/highline12.gif"/>
+      <img src="/images/bigbldg3.gif"/>
+      <img src="/images/highline13.gif"/>
+      <img src="/images/highline14.gif"/>
+      <img src="/images/highline15.gif"/>
+    </div>
+  </div>
+{%- endmacro %}
+
+
+{% macro music(loop_index) -%}
+  <div id="section-{{loop_index}}" style="position: absolute;
+					  top: 100px;
+					  left: 106px;
+					  z-index: 2;
+					  display: block;
+					  border: 5px solid black;
+					  background-color: black;
+					  display: none;">
+
+
+
+
+
+    <button id="close-{{loop_index}}" class="btn btn-link pull-right" style="color: black;font-size: 29px;position: absolute;right:
+    10px;">x</button>
+    <div class="">
+      <iframe style="border: 0; width: 260px; height: 260px;" src="https://bandcamp.com/EmbeddedPlayer/album=2682474480/size=large/bgcol=333333/linkcol=9a64ff/minimal=true/transparent=true/" seamless><a href="http://invisiblehand.bandcamp.com/album/im-here-right-now">I&#39;m Here Right Now by Invisible Hand</a></iframe>
+      <iframe style="border: 0; width: 260px; height: 260px;"
+      src="https://bandcamp.com/EmbeddedPlayer/album=2565650392/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+      seamless><a href="http://invisiblehand.bandcamp.com/album/squirrel-jail">Squirrel Jail by
+      Invisible Hand</a></iframe>
+      <iframe style="border: 0; width: 260px; height: 260px;"
+      src="https://bandcamp.com/EmbeddedPlayer/album=110548341/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+      seamless><a href="http://invisiblehand.bandcamp.com/album/aja-2">Aja by Invisible
+      Hand</a></iframe>
+      <iframe style="border: 0; width: 260px; height: 260px;"
+      src="https://bandcamp.com/EmbeddedPlayer/album=535732470/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+      seamless><a href="http://invisiblehand.bandcamp.com/album/invisible-hand">INVISIBLE HAND by
+      Invisible Hand</a></iframe><br>
+      <iframe style="border: 0; width: 260px; height: 260px;"
+      src="https://bandcamp.com/EmbeddedPlayer/album=3323514777/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+      seamless><a href="http://invisiblehand.bandcamp.com/album/how-i-ran-the-laundromat">How I Ran
+      The Laundromat by Invisible Hand</a></iframe>
+      <iframe style="border: 0; width: 260px; height: 260px;"
+      src="https://bandcamp.com/EmbeddedPlayer/album=2929547978/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+      seamless><a
+      href="http://invisiblehand.bandcamp.com/album/borrowed-beams-of-light-split-7">Borrowed Beams of
+      Light Split 7&quot; by Invisible Hand</a></iframe>
+      <iframe style="border: 0; width: 260px; height: 260px;"
+      src="https://bandcamp.com/EmbeddedPlayer/album=2742598044/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+      seamless><a href="http://invisiblehand.bandcamp.com/album/live-like-kings-live-at-kings">Live
+      Like Kings, Live At Kings by Invisible Hand</a></iframe>
+      <iframe style="border: 0; width: 260px; height: 260px;"
+      src="https://bandcamp.com/EmbeddedPlayer/album=866237636/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+      seamless><a href="http://invisiblehand.bandcamp.com/album/sinister-hand">SINISTER HAND by
+      Invisible Hand</a></iframe>
+    </div>
+  </div>
+{%- endmacro %}
