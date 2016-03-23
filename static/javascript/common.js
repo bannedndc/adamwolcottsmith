@@ -1,36 +1,15 @@
 if($(document).ready()) {
+  // handle section opening and closing
   $('[id^=glitch-]').click(function() {
     var id = this.id.split('-')[1];
-    $('#section-'+id).show();
+    $('#section-'+id).css('visibility', 'visible');
     $('#overlay').show();
     $('#close-'+id).click(function() {
-      $('#section-'+id).hide();
+      $('#section-'+id).css('visibility', 'hidden');
     });
   });
 
-  // $('[id^=glitch-]').click(function(event) {
-  //   debugger;
-  //   var id = this.id.split('-')[1];
-  //   var section = $('#section-'+id);
-  //   var glitchUrl = section.data('url') 
-  //   $.ajax({
-  //     type: 'GET',
-  //     url: glitchUrl,
-  //     success: function(data) {
-  //       bootbox.dialog({
-  //         message: data,
-  //         closeButton: true
-  //       });
-  //     }
-  // });
-
-
-  // $('[id^=glitch-]').click(function() {
-  //   debugger;
-  //   bootbox.alert("Hello world!", function() {
-  //     console.log("Alert Callback");
-  //   });
-  // });
-
-
+  $('#overlay').click(function() {
+    $('[id^=section-]').css('visibility', 'hidden');
+  });
 }

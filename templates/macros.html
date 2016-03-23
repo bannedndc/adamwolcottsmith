@@ -9,7 +9,7 @@
 					    display: block;
 					    border: 5px solid black;
 					    background-color: white;
-					    display: none;">
+					    visibility: hidden;">
 
 
 
@@ -55,7 +55,8 @@
 					  height: 789px;
 					  background-color: black;
 					  width: 100%;
-					  display: none;
+					  display: block;
+					  visibility: hidden;
 					  z-index: 2;
 					  overflow: hidden;
 					  border: 5px solid black;">
@@ -99,13 +100,14 @@
 					  display: block;
 					  border: 5px solid black;
 					  background-color: black;
-					  display: none;">
+					  display: block;
+					  visibility: hidden;">
 
 
 
 
 
-    <button id="close-{{loop_index}}" class="btn btn-link pull-right" style="color: black;font-size: 29px;position: absolute;right:
+    <button id="close-{{loop_index}}" class="btn btn-link pull-right" style="color: green;font-size: 29px; z-index: 1; position: absolute;right:
     10px;">x</button>
     <div class="">
       <iframe style="border: 0; width: 260px; height: 260px;" src="https://bandcamp.com/EmbeddedPlayer/album=2682474480/size=large/bgcol=333333/linkcol=9a64ff/minimal=true/transparent=true/" seamless><a href="http://invisiblehand.bandcamp.com/album/im-here-right-now">I&#39;m Here Right Now by Invisible Hand</a></iframe>
