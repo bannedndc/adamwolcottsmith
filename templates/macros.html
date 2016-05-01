@@ -35,7 +35,7 @@
       <table class="table">
 	<caption>past events.</caption>
 	<tbody>
-	  {% for tour_date in past_dates[::-1] %}
+	  {% for tour_date in past_dates %}
 	  <tr>
 	    {% set date = tour_date.start.date.split('-') %}
 	    <th scope="row">{{date[1]}}/{{date[2]}}/{{date[0]}}</th>

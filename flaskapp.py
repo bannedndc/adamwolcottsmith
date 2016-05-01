@@ -11,9 +11,9 @@ app.config.from_pyfile('flaskapp.cfg')
 @app.route('/')
 def index():
     upcoming =\
-      requests.get("http://api.songkick.com/api/3.0/artists/864070/calendar.json?apikey=zdpZeMNcromcrzB4")
+      requests.get("http://api.songkick.com/api/3.0/artists/864070/calendar.json?apikey=zdpZeMNcromcrzB4&order=desc")
     past =\
-      requests.get("http://api.songkick.com/api/3.0/artists/864070/gigography.json?apikey=zdpZeMNcromcrzB4")
+      requests.get("http://api.songkick.com/api/3.0/artists/864070/gigography.json?apikey=zdpZeMNcromcrzB4&order=desc")
     return render_template('index.html',
 			   results_upcoming=upcoming.json(),
 			   results_past=past.json())
