@@ -19,25 +19,9 @@
   <div id="overlay" style="height: 100vh; width: 100%;position: absolute;background-color: transparent;display: none;"></div>
 
   <section class='container'>
-
-    <div class="glitch">
-      {% for square in ['tour dates', 'photos', 'music releases', 'Invisible Hand is a band', 'Invisible Hand is a
-      band', 'Invisible Hand is a band', 'Invisible Hand is a band'] %}
-	<div id="glitch-{{loop.index}}" style="cursor: pointer;">
-	  <h1 style="position: absolute;top: 0;z-index: 1;">{{ square }}</h1>
-	  <img src="/images/glitch.gif" />
-	</div>
-	{% if square == 'tour dates' %}
-	  {% set upcoming_dates =  results_upcoming.resultsPage.results.event %}
-	  {% set past_dates =  results_past.resultsPage.results.event %}
-	  {{ macros.tour_dates(loop.index, upcoming_dates, past_dates) }}
-	{% elif square == 'photos' %}
-	  {{ macros.photos(loop.index) }}
-	{% elif square == 'music releases' %}
-	  {{ macros.music(loop.index) }}
-	{% endif %}
-      {% endfor %}
-    </div>
+    <img src="images/wollysmithweb.png" style="width: 100%; border-radius: 100px;"/>
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/448643658%3Fsecret_token%3Ds-OhNRA&amp;color=%23160d07&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
 
   </section>
   <script src='/javascript/bootbox.js'></script>
