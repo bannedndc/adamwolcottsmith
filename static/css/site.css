@@ -31,9 +31,9 @@ hgroup,
 section{
   display: block;
 }
+
 body {
-  color: #404040;
-  background: #0C0C05;
+  color: black;
   font-size: 14px;
   line-height: 1.4;
 }
