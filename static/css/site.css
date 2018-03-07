@@ -34,7 +34,9 @@ section{
 
 body {
   color: black;
+  font-family: 'Abel', sans-serif;
   font-size: 14px;
+  letter-spacing: 1px;
   line-height: 1.4;
 }
 
@@ -123,7 +125,7 @@ ul {
 }
 
 a {
-  color: #069;
+  color: #EA0011;
   text-decoration: none;
 }
 a:hover {
@@ -168,7 +170,6 @@ p + h2 {
   margin-top: 2em;
 }
 html {
-  background: #0C0C05;
   height: 100%;
 }
 code {
