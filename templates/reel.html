@@ -1,0 +1,89 @@
+<!doctype html>
+{% import 'macros.html' as macros %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>wipa epk</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+
+  <link href='/css/site.css' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+</head>
+<body>
+  <div id="overlay" style="height: 100vh; width: 100%;position: absolute;background-color: transparent;display: none;"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12" style="padding-top: 20px;"> 
+	<div style="border: 2px dotted black;">
+	  <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/656053443%3Fsecret_token%3Ds-qHYzi&color=%23160d07&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+	</div>
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-2">
+	WOLCOTTS INSTANT PAIN ANNIHILATOR	
+      </div>
+      <div class="col-sm-5">
+	<img src="images/WIPA_cover.jpg" style="width: 100%; border-radius: 100px;"/>
+      </div>
+      <div class="col-sm-5">
+	{{ macros.wipa_press() }}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-2">
+	ZEN MOTHER
+      </div>
+      <div class="col-sm-5">
+	<img src="images/ZM.jpg" style="width: 100%; border-radius: 100px;"/>
+      </div>
+      <div class="col-sm-5">
+	{{ macros.zm_press() }}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-2">
+	Y'ALL
+      </div>
+      <div class="col-sm-5">
+	<img src="images/yall.jpg" style="width: 100%; border-radius: 100px;"/>
+      </div>
+      <div class="col-sm-5">
+	{{ macros.yall_press() }}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-2">
+	INVISIBLE HAND	
+      </div>
+      <div class="col-sm-5">
+	<img src="images/IH.jpg" style="width: 100%; border-radius: 100px;"/>
+      </div>
+      <div class="col-sm-5">
+	{{ macros.ih_press() }}
+      </div>
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-12">
+	{{ macros.contact() }}
+      </div>
+    </div>
+  </div>
+  <script src='/javascript/bootbox.js'></script>
+  <script src='/javascript/common.js'></script>
+</body>
+</html>

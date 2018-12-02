@@ -28,6 +28,10 @@ def epk():
 			   # results_upcoming=upcoming.json(),
 			   # results_past=past.json())
 
+@app.route('/reel')
+def reel():
+    return render_template('reel.html')
+
 @app.route('/tour_dates')
 def tour_dates():
     return render_template('_tour_dates.html')
